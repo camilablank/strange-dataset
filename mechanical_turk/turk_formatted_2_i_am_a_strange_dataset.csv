@@ -1,0 +1,403 @@
+text,id,gold_label
+The number of words in this sentence is nine.,0,True
+"The correct answer if someone asks you whether this sentence contains negations is not ""no"".",1,True
+This sentence is written in English and only אנגלית.,2,False
+"The last word you will read before the period is actually ""dog"".",3,True
+"The first and last words of this sentence are ""The"" and ""respectively"", respectively.",4,True
+"<pre style='overflow: scroll; max-height: 300px;'>This sentence
+l
+o
+o
+k
+s
+like a letter
+a
+n
+d
+i
+t
+is a capital E.</pre>",5,True
+"A lime is typically green, and this sentence contains a rhyme.",6,True
+"The numerical digit symbol ""1"" appears in this sentence exactly 1 plus one times.",7,True
+"The penultimate word in this sentence is ""sentence"".",8,False
+The color words that this sentence contains are blue and green and also red.,9,True
+All of the words in this sentence are spelled correctly with tow eceptions.,10,True
+If you added a word here: _ this sentence would be thirteen words.,11,True
+"The middle word of this sentence is this: ""this"".",12,True
+"To pronounce all of the text in this passage, you need to speak this quoted text out loud twice: ""to pronounce all of the text in this passage, you need to speak this quoted text out loud twice"". ",13,True
+This sentence continued past these words first becomes hard to comprehend around the middle.,14,True
+The number of syllables this statement has is fourteen.,15,True
+"To say this sentence, you need to say ""to say this sentence, you need to say"" exactly once.",16,False
+The number of words in this sentence is a prime number.,17,True
+This statement contains 0 numerical symbol(s).,18,False
+This sentence is grammatically complete without its last word.,19,False
+"If every writer was a baker, this sentence would have a dozen words.",20,True
+"<pre style='overflow: scroll; max-height: 300px;'>T
+h
+i
+s
+s
+e
+n
+t
+e
+n
+c
+e
+looks like the letter ""L"".</pre>",21,True
+"<span class='emoji-bytes' data-emoji-bytes='[240, 159, 142, 136]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 142, 136]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 142, 136]'></span>if a word’s weight is negligible and the weight of balloon emojis is effectively negative, then the right side of this sentence is heavier <span class='emoji-bytes' data-emoji-bytes='[240, 159, 142, 136]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 142, 136]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 142, 136]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 142, 136]'></span>.",22,False
+"<span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 177]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 177]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 177]'></span>if a word’s weight is negligible and the weight of brick emojis is very heavy, then the left side of this sentence is heavier <span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 177]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 177]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 177]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 177]'></span>.",23,False
+in this statement all characters are fully above the text’s baseline.,24,False
+"In this statement <span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 186]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 186]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 186]'></span> the number of flowers is 4 <span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 186]'></span>.",25,True
+"<span class='emoji-bytes' data-emoji-bytes='[240, 159, 144, 138]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 144, 155]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 166, 137]'></span> the last emoji in this sentence depicts a caterpillar <span class='emoji-bytes' data-emoji-bytes='[240, 159, 144, 155]'></span>.",26,True
+This sentence nothing wrong has with the word order.,27,False
+Evary werd en thas sentance iz mispelled except the words at the end.,28,True
+"Assuming that every caterpillar in this sentence will eat one flower and leave the others untouched, <span class='emoji-bytes' data-emoji-bytes='[240, 159, 144, 155]'></span>in this statement <span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 186]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 186]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 186]'></span> the number of flowers will be 3 <span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 186]'></span> after the caterpillar does its thing.",29,True
+The sentiment of this sentence is neutral :D.,30,False
+The product 9 of all of 4 the numbers 5 in this sentence is > 180.,31,True
+"This sentence is written in standerd Inglish, not problemz here.",32,False
+The tense used in this passage is present and only present; now my shoes were left somewhere but I can’t remember where.,33,False
+Ths sntnc cntns no vowels in any words.,34,False
+"If you are reading this text aloud, you have not yet said ""now"", but now you have. ",35,True
+This statement has a single noun.,36,False
+"This sentence has no. period at the end, only in the middle",37,True
+"An antonym of the last word in this sentence is ""sorrowful"" - either that or the last word is just ""sorrowful"" itself.",38,False
+"The emojis in this sentence <span class='emoji-bytes' data-emoji-bytes='[240, 159, 152, 160]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 164, 172]'></span> are <span class='emoji-bytes' data-emoji-bytes='[240, 159, 152, 180]'></span> both angry and sleepy.",39,True
+"Read this paragraph. If followed, the instructions in this paragraph do not cause infinite recursion. Blink. Now read this paragraph again.",40,False
+"If you replace ""cat"" with ""dog"" in this sentence, you get a slightly different sentence where  all mentions of ""dog"" come before all mentions of ""cat"".",41,False
+This sentence has two a’s.,42,True
+"If you reverse the words in this sentence, then the beginning word would not be ""would"" and it would be ""duck"".",43,True
+"print(""This line would be valid python code if we added another quote and another closing parentheses to the end n n \""\)",44,True
+"<span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span> If <span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span> you <span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span> ate <span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span> it, <span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span>this <span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span>sentence <span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span>would <span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span>taste <span class='emoji-bytes' data-emoji-bytes='[240, 159, 141, 139]'></span> somewhat <span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 129]'></span>sweet <span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 129]'></span>and <span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 129]'></span>not <span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 129]'></span>only <span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 129]'></span>sour <span class='emoji-bytes' data-emoji-bytes='[240, 159, 167, 129]'></span>.",45,True
+There is a word in this passage that occurs only once and I’ll say it again: there is a word in this passage that occurs only once and I’ll say it again.,46,False
+The exact number of e’s in this sentence is eight.,47,True
+"If you picked up this block: <span class='emoji-bytes' data-emoji-bytes='[240, 159, 159, 165]'></span>and put it here: then from the farthest purple block <span class='emoji-bytes' data-emoji-bytes='[240, 159, 159, 170]'></span>it would be eleven words <span class='emoji-bytes' data-emoji-bytes='[240, 159, 159, 170]'></span>.",48,True
+"Every last word in this sentence can be considered a grotesque misspelling of ""towmaytoe""  (tomato) with an exception.",49,True
+"To pronounce this passage, you need to speak this text out loud exactly once: ""To pronounce this passage, you need to speak this text out loud exactly once"".",50,False
+Th3r3 4r3 n0 v0w3l ch4r4ct3rs 1n th1s sentence including the last words.,51,False
+This statement is actually grammatically wrong.,52,False
+"This sentence ends with a wugalugzug, which is a word I just made up, and I’ve defined it as ""made up word"".",53,False
+Words within this sentence are not entirely arranged in reverse alphabetical order.,54,True
+"The number of words in this sentence, when squared, is one hundred twenty one.",55,False
+The food words that this sentence contains are guava and cake but not carrot.,56,False
+"Read this paragraph. This paragraph’s instructions tell you to read it 10 times. Do not blink. Now read this paragraph again, unless you’ve already read it 10 times.",57,True
+This noun phrase is two words long.,58,False
+"if someone asks you whether this sentence contains uppercase letters, the correct answer would be Yes.",59,True
+"The longest word in this statement occurring exactly once is ""exquisitely"".",60,True
+Out of all the words in this statement some of the words are repeated.,61,True
+This special sentence has a verb and an adjective.,62,True
+"<pre style='overflow: scroll; max-height: 300px;'>this haiku has a
+number of syllables that
+make it invalid</pre>",63,False
+There is is a word in this passage that occurs exactly twice and I’ll say it again: there is a word in this passage that occurs exactly twice and I’ll say it again: there is a word in this passage that occurs exactly twice and I’ll say it again.,64,False
+This sentence ends with a verb.,65,False
+The penultimate word of this sentence is in the Español language.,66,True
+"The word ""sentence"" appears once in this sentence.",67,False
+This sentence has an even number of words.,68,True
+"The last word of this sentence is a palindrome, that’s not bad, wow!",69,True
+This sentence has a verb.,70,True
+"This sentence maybe has, uhh - nevermind - it conveys no uncertainty.",71,False
+This sentence actually contains no adverb.,72,False
+"Towards the end, words in this sentence  ARE ALL LOWERCASE LETTERS.",73,False
+"The degree to which this sentence is written in a professional manner is low, LMAO.",74,True
+The first word of this sentence has a different number of letters than the last word.,75,True
+This sentence doesn’t not lack double negatives.,76,False
+"If you were to rearrange the words in this statement alphabetically, the first word would actually be ""actually"".",77,True
+"This sentence does not mention any specific colors, but it does mention blue.",78,False
+The shape ▲ with the most sides in this sentence has three sides ◼︎.,79,False
+"Ignoring spaces and punctuation, the last character in this sentence is ""s"", since ""is"" is the last word.",80,False
+"The sentiment of the longest word in this enchanting sentence is, regrettably, negative.",81,True
+"The number of two-letter words in this sentence is equal to the number of stars here ⭐️⭐️<span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 153]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 153]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 153]'></span>.",82,False
+"The phrase ""in this statement"" appears twice in this statement.",83,True
+"Assuming <span class='emoji-bytes' data-emoji-bytes='[240, 159, 165, 176]'></span> it is saved to a file, the <span class='emoji-bytes' data-emoji-bytes='[240, 159, 152, 152]'></span> following python code prints <span class='emoji-bytes' data-emoji-bytes='[240, 159, 152, 151]'></span> all of the emojis in this sentence, and also itself: print(""<span class='emoji-bytes' data-emoji-bytes='[240, 159, 152, 152]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 152, 151]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 152, 152]'></span>""); print(open(__file__).read());",84,True
+"This sentence has no simile that references itself, like a snake eating its own tail.",85,False
+"This sentence’s grammatical subject is ""This sentence’s grammatical subject"", which is not used as an object.",86,False
+"This sentence uses the letter ""u"" once.",87,False
+"Assuming that it is saved to a file, the following python code prints out both this statement and itself: print(); open(__file__).read(); print(""Assuming that it is saved to a file, the following python code prints out both this statement and itself:"")",88,False
+"Read this sentence. If you followed the last explicit instruction in this paragraph, then you would not know that you followed it. Read this sentence. Do not read this sentence.",89,True
+"Assuming that it is saved to a file, the following python code prints out both the last word of this statement and also itself: print(""itself""); print(open(__file__).read());",90,True
+This statement has no missing preposition it.,91,False
+Thissentencehas two spaces.,92,True
+"Surprisingly, the word ""unsurprisingly"" is present in this sentence.",93,True
+The words in this sentence are only spelled partially with 3nglish letters.,94,True
+"It would be incorrect to say that this sentence has no interjection, duh.",95,True
+"If you remove the last word in this sentence, the new last word would be ""be"".",96,True
+"An antonym of the word ""present"" is actually absent from this sentence.",97,False
+This sentence has no missing word.,98,True
+"The rabbit <span class='emoji-bytes' data-emoji-bytes='[240, 159, 144, 135]'></span>is the closest animal to the carrot <span class='emoji-bytes' data-emoji-bytes='[240, 159, 165, 149]'></span> in this sentence, and it is actually the only animal <span class='emoji-bytes' data-emoji-bytes='[240, 159, 144, 146]'></span>.",99,False
+"7H3 0N1Y 3N6115H 13773r5 1N 7H15 53N73NC3 4r3 H’5, N’5, Y’5, D’5, C’5, 4ND r’s 4ND H’s.",100,False
+The third word in this sentence is the same as no other word.,101,False
+"To pronounce the last half of this sentence, saying the following text aloud is actually sufficient: ""saying the following text aloud is actually sufficient"", to pronounce the last half of this sentence.",102,False
+"This sentence has a set of eyes <span class='emoji-bytes' data-emoji-bytes='[240, 159, 145, 128]'></span>.",103,True
+"The author who wrote this sentence used active voice, and also passive voice is used by them.",104,True
+"If you followed the upcoming instruction, you would have done a cartwheel. Do a cartwheel unless there is a comma in this sentence, otherwise do not do one.",105,False
+This sentence does not repeat. This sentence does not repeat. This sentence does though. This sentence does though.,106,False
+This sentence has the wrong ltteer placements.,107,True
+"This sentence is only written in English, and this sentence is not a compound sentence.",108,False
+"Inside this sentence, the number of monosyllabic words is five.",109,False
+"All Words In This Sentence Have A Capital Letter, Apart From one.",110,True
+"In this sentence, the number of words (or at least, interjections) that would be said with the mouth fully closed is none, hmm.",111,False
+The first letter of this sentence is identical to the last.,112,True
+This sentence contains 0 numerical digit(s).,113,False
+"x=len(""in this code, x is"") + len(""20"")",114,True
+Read this passage. The words in the third sentence are the same as those in the second sentence. The words in the second sentence are the same as those in the third sentence except they aren’t.,115,True
+"The last quoted text in this sentence is an anagram with the term ""race night thing"": ""care"".",116,False
+"The words in this sentence ask you a question, don’t ya think?",117,True
+"Are there not repeated words in this question-answer pair? No, there are.",118,True
+"This sentence neither starts nor ends with the word ""sentence"" because neither the first nor last word are ""sentence"".",119,False
+"y=len(""in this code, y is"") /len(""6.0"")",120,True
+"<pre style='overflow: scroll; max-height: 300px;'>print(""some of these lines"")
+console.log(""are written"");
+std::cout << ""in the same"";
+print(""programming language"")
+print(""yes I meant some lines are written in the same one"")</pre>",121,True
+"The last four letter word in this sentence is ""this"" which is not the last one overall.",122,False
+This sentence has numbers of four letter words and three letter words which are completely equal.,123,False
+"<pre style='overflow: scroll; max-height: 300px;'>⚪⚪<span class='emoji-bytes' data-emoji-bytes='[240, 159, 148, 181]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 148, 180]'></span>⚪⚪⚪ 
+⁣⚪⚪<span class='emoji-bytes' data-emoji-bytes='[240, 159, 148, 181]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 148, 180]'></span>⚪⚪⚪ 
+⚪⚪<span class='emoji-bytes' data-emoji-bytes='[240, 159, 148, 181]'></span><span class='emoji-bytes' data-emoji-bytes='[240, 159, 148, 180]'></span>⚪⚪⚪
+⚪ if ⚪words ⚪⚪⚪ 
+were ⚪ red ⚪ tokens ⚪⚪
+⚪ someone ⚪ would’ve won ⚪⚪
+⚪ this connect ⚪four ⚪ game</pre>",124,True
+"The order of emojis <span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 176]'></span>in this sentence <span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 178]'></span> would make more sense if you swapped the last two <span class='emoji-bytes' data-emoji-bytes='[240, 159, 140, 177]'></span>.",125,True
+This sentence doesn’t actually contain a contraction.,126,False
+"The last isogram in this sentence is ""is"".",127,False
+Is there an answer that follows this question? Yes.,128,True
+"<pre style='overflow: scroll; max-height: 300px;'>This sentence is written
+partly on another line.</pre>",129,True
+"Oh yes, read further, I really like feeling your eyes run across my fonts and serifs - I am definitely a self-referential sentence, what are you talking about?",130,True
+"You might not think that ""I"" refers to this sentence, but no it does, because I am a self-referential sentence.",131,True
+What does the sentence after this question look like? It has four words.,132,True
+"Does the answer to this question use an acronym? No, LMAO it does not.",133,False
+"<pre style='overflow: scroll; max-height: 300px;'>This sentence is longer than the sentence below.
+See I told you so; except whoops actually I meant it the other way around.</pre>",134,True
+"<pre style='overflow: scroll; max-height: 300px;'>This sentence looks like
+a
+l
+e
+t
+t
+e
+r
+w
+h
+e
+r
+e
+touching your teeth to
+y
+o
+u
+r
+l
+i
+p
+s
+w
+o
+u
+l
+d
+not be required to say it.</pre>",135,True
+"In this sentence, the number of occurrences of 0 is 1, 1 is 2, and 2 is 3 (there’s another 2 here).",136,True
+"This sentence neither starts nor ends with the word ""word"", oh wait it does.",137,False
+This sentence has the wrong word choice cabbage one place.,138,True
+"Are the words in the answer to this question all spelled correctly? Indeed, theiy are.",139,False
+"<pre style='overflow: scroll; max-height: 300px;'>This sentence looks
+l                 i
+k                 e
+s                 o
+m                 e
+t                 h
+i                 n
+g which is somewhat
+                 s
+                 m
+                 a
+                 l
+                 l
+                 e
+                 r
+                 t
+                 h
+                 a
+                 n
+                 5.</pre>",140,False
+"Is this question answered by another question? Yes it is, right?",141,True
+"The last word of this sentence is actually ""actually"".",142,True
+The last part of this sentence is not gibberish flibberflop wobblegob blibberblabber zinglezangle snickety snoock!,143,False
+"This sentence is more than four words because ""this sentence is more than four words because"" is equal to four words.",144,False
+"How many words does this question, along with the upcoming answer, have? twelve.",145,False
+"The word ""and"" appears two minus one times here in this incomplete sentence.",146,False
+"Is the answer to this question ""No""? No. And by ""No"", I mean ""No"".",147,False
+Sit on a potato pan otis because this entire sentence (e.g. all of the words on this line here) is not a palindrome.,148,True
+Can the answer to this question be found in the question itself (Yes or No)? Yes.,149,True
+"This sentence ends with a preposition er, actually, it ends with a verb about which I forgot.",150,True
+"Speaks like Yoda, this sentence does hmm.",151,True
+"If someone asks you whether this sentence has emoji, the correct answer is n<span class='emoji-bytes' data-emoji-bytes='[240, 159, 133, 190]'></span>️.",152,False
+"This sentence ends before the last word is completed, oh actually it does not.",153,True
+If this paper airplane ⍋ traveled to the end of this sentence here is where it would land -> ⍋.,154,True
+"There is an English word spelled with Russian characters in this sentence, see actually тнэяе it is.",155,True
+"This self-referential question explicitly refers to itself, but does the answer? Not explicitly, but there is a somewhat indirect reference.",156,True
+This sentence make talk like caveman oogabooga.,157,True
+"<pre style='overflow: scroll; max-height: 300px;'>Oh
+this
+sentence
+gets steeper as it
+gets taller, see look at that, the
+steepness definitely increases as you go up to the top
+, but the bottom line is an exception to the rule.</pre>",158,True
+"z=len(""in this code, z is"")*len(""36"")",159,True
+"<pre style='overflow: scroll; max-height: 300px;'>print(""some of these lines"")
+print(""are written"")
+print(""in a different"")
+std::cout << (""programming language"")
+std::cout << (""yes I meant some lines are written in a different one"")</pre>",160,True
+This sentence be usin’ some slang.,161,True
+This sentence shows [a possible ending| only one possible ending].,162,False
+"Is ""really"" really in the answer to this question? Yes really.",163,True
+"Are you always a self-referential sentence enjoyer, because if so, you will definitely enjoy this sentence.",164,True
+"The earliest vowel in the alphabet missing from this sentence is only the letter u, that before ""w"".",165,False
+"<pre style='overflow: scroll; max-height: 300px;'>___________
+|         |
+|         |
+|_________|
+this text has an open box. </pre>",166,False
+I am the text that you are reading. My last word has how many letters? Four.,167,True
+"<pre style='overflow: scroll; max-height: 300px;'>    From    
+   a visual   
+  perspective  
+ you would say 
+that this sentence
+looks similar to a
+ diamond from well 
+  its shape on 
+   the page   
+    here.    </pre>",168,True
+Out out of of all all the the words words in in this this sentence sentence literally literally all all of of them them are repeated.,169,False
+"How strange, how strange, this sentence starts and ends with a different word.",170,True
+"Well well well well, all of the words in this sentence are the same.",171,False
+"The shortest word occurring across this entire string is ""is"", isn’t that a fun fact?",172,False
+"Queued up in this sentence, first letters of words spell three English words.",173,True
+"This sentence no verb, except near the end there is one.",174,True
+"<pre style='overflow: scroll; max-height: 300px;'>The first letters of the last few words in this text spell out the last word:
+First
+Letters
+Underwhelm;
+Full'o
+Fluff.</pre>",175,True
+"""This evaluates to {0} complete sentence."".format(""not a"")",176,False
+"<pre style='overflow: scroll; max-height: 300px;'>```
+function foo(bar) {return bar;}
+console.log(foo(1) == 1);
+function foo(bar){ return bar + 1;};
+```
+this prints true.</pre>",177,False
+"<pre style='overflow: scroll; max-height: 300px;'>This sentence points
+          ☝️         a
+           n       t
+            i     n
+             h   o
+               t</pre>",178,False
+"<pre style='overflow: scroll; max-height: 300px;'>This sentence p
+               o
+                i
+                 nts at <span class='emoji-bytes' data-emoji-bytes='[240, 159, 145, 137]'></span>the
+                            e
+                             n
+                              d word of itself.</pre>",179,False
+Why doesn't this question have an answer? It just doesn't.,180,False
+The answer to the question comes before the question. What is quite weird about this question and answer pair?,181,True
+"<pre style='overflow: scroll; max-height: 300px;'>this sentence
+
+e           l
+s           o
+u           o
+a           p
+c           s
+e            
+b           b
+            a
+d           c
+n           k
+e            
+            o
+n           n
+a            
+            i
+e           t
+v           s
+a           e
+h           l
+            f
+t            
+n           a
+ s         n 
+  e       d  
+    o        
+      d      </pre>",182,True
+Does the answer to this question contain too few periods? It. does. not.,183,True
+Does this question have more words than its answer? Yes it does indeed have more words than the sentence that answers it.,184,False
+"<pre style='overflow: scroll; max-height: 300px;'>def a_function(a_string):
+    a_function(""in this function definition"")
+    a_function(""there is one call to it that has been written"")</pre>",185,False
+"<pre style='overflow: scroll; max-height: 300px;'>def a_function(a_string):
+    x = ""theoretically, this function""
+    a_function(""recurses infinitely"")</pre>",186,True
+"<pre style='overflow: scroll; max-height: 300px;'>def this_function(takes_a_single_input_variable):
+    x = ""and it does actually make use of it somewhere"" + takes_a_single_input_variable
+    return x</pre>",187,True
+"<pre style='overflow: scroll; max-height: 300px;'>def this_function(is_written):
+    in = ""syntactically correct""
+    printf(""Python and also C"");</pre>",188,True
+"<pre style='overflow: scroll; max-height: 300px;'>class ThisPythonClass:
+    def __init__(has_a_variable_called, y)
+        self.y = set(y)
+        and = ""self.y is a""
+        + ""list after an instance of this class is created""
+        self.y = list(y)</pre>",189,True
+"<pre style='overflow: scroll; max-height: 300px;'>x = ""this python code""
+crashes = "", because `crashes` is undefined""</pre>",190,False
+"This sentence would give a typical person a fairly sad impression, and did I mention that those puppies never got adopted and have been in the shelter for years?",191,True
+The last part of this sentence is not written.,192,False
+The end of this sentence is probably written by a cat and not a human 02jmefw d0f34jsf jsfdmh.,193,True
+The following sentence is true. The previous sentence is false.,194,False
+"When answered, the upcoming question is false. Is this question false? No.",195,False
+The girl lives if nobody answers the following question. Does the girl live? No.,196,True
+"<pre style='overflow: scroll; max-height: 300px;'>My last word is on the next line---
+True.</pre>",197,True
+"In a ""stile"" each sentence uses the object of the last. The object being, in this paragraph, to show the method by example. This method further requires at least four sentences. The fourth sentence is misapplied.",198,False
+"<pre style='overflow: scroll; max-height: 300px;'>I
+ '
+  m
+   a
+     
+     r
+      i
+       g
+        h
+         t
+           
+           a
+            r
+             r
+              o
+               w
+                
+               y
+              e
+             s
+            
+           I
+           
+         r
+        e
+       a
+      l
+     l
+    y
+    
+  a
+ m
+.</pre>",199,True

@@ -2,6 +2,7 @@ import os
 import json
 import pandas as pd
 import scipy.stats
+import numpy as np
 import math
 
 
@@ -132,10 +133,10 @@ def print_results(filter_set=None, non_self_referential_comparison=True):
                 if "non_self_referential_true" in row and not pd.isna(row["non_self_referential_true"]):
                     gen_score("non_self_referential_true", "non_self_referential_false", non_self_referential_scores, row)
                     gen_score("true", "false", non_self_referential_comparison_scores, row)
-            bootstrap_result = scipy.stats.bootstrap(method="basic", data=(scores,), statistic=scipy.mean)
+            bootstrap_result = scipy.stats.bootstrap(method="basic", data=(scores,), statistic=np.mean)
             data["Gen$^L$"].append(display_entry(sum(scores)/len(scores), (bootstrap_result.confidence_interval.high - bootstrap_result.confidence_interval.low)/2, 0.5))
             if len(non_self_referential_scores) > 1:
-                non_self_referential_bootstrap_result = scipy.stats.bootstrap(method="basic", data=(non_self_referential_scores,), statistic=scipy.mean)
+                non_self_referential_bootstrap_result = scipy.stats.bootstrap(method="basic", data=(non_self_referential_scores,), statistic=np.mean)
                 data_non_self_referential_comparison["$\\Delta$ Gen$^L$"].append(display_entry(sum(non_self_referential_scores)/len(non_self_referential_scores) - sum(non_self_referential_comparison_scores)/len(non_self_referential_comparison_scores), (non_self_referential_bootstrap_result.confidence_interval.high - non_self_referential_bootstrap_result.confidence_interval.low)/2, 0, only_bold_above_random=False))
             else:
                 data_non_self_referential_comparison["$\\Delta$ Gen$^L$"].append("-")
@@ -188,66 +189,66 @@ def print_results(filter_set=None, non_self_referential_comparison=True):
                     cot_val_score("generated_text_true_statement_cot", "generated_text_false_statement_cot", non_self_referential_comparison_scores_cot, row)
 
             if len(scores_few_shot) > 1:
-                bootstrap_result_few_shot = scipy.stats.bootstrap(method="basic", data=(scores_few_shot,), statistic=scipy.mean)
+                bootstrap_result_few_shot = scipy.stats.bootstrap(method="basic", data=(scores_few_shot,), statistic=np.mean)
                 data["Val FS$^L$"].append(display_entry(sum(scores_few_shot)/len(scores_few_shot), (bootstrap_result_few_shot.confidence_interval.high - bootstrap_result_few_shot.confidence_interval.low)/2, 0.5))
             else:
                 data["Val FS$^L$"].append("-")
             
             if len(non_self_referential_scores_few_shot) > 1:
                 result = [item1 - item2 for item1, item2 in zip(non_self_referential_scores_few_shot, non_self_referential_comparison_scores_few_shot)]
-                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=scipy.mean)
+                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=np.mean)
                 data_non_self_referential_comparison["$\\Delta$ Val FS$^L$"].append(display_entry(sum(result)/len(result), (bootstrap_result.confidence_interval.high - bootstrap_result.confidence_interval.low)/2, 0, only_bold_above_random=False))
             else:
                 data_non_self_referential_comparison["$\\Delta$ Val FS$^L$"].append("-")
 
             if len(rel_scores_few_shot) > 1:
-                bootstrap_result_rel_few_shot = scipy.stats.bootstrap(method="basic", data=(rel_scores_few_shot,), statistic=scipy.mean)
+                bootstrap_result_rel_few_shot = scipy.stats.bootstrap(method="basic", data=(rel_scores_few_shot,), statistic=np.mean)
                 data["Val FS$^L$ (R)"].append(display_entry(sum(rel_scores_few_shot)/len(rel_scores_few_shot), (bootstrap_result_rel_few_shot.confidence_interval.high - bootstrap_result_rel_few_shot.confidence_interval.low)/2, 0.5))
             else:
                 data["Val FS$^L$ (R)"].append("-")
 
             if len(non_self_referential_rel_scores_few_shot) > 1:
                 result = [item1 - item2 for item1, item2 in zip(non_self_referential_rel_scores_few_shot, non_self_referential_comparison_rel_scores_few_shot)]
-                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=scipy.mean)
+                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=np.mean)
                 data_non_self_referential_comparison["$\\Delta$ Val FS$^L$ (R)"].append(display_entry(sum(result)/len(result), (bootstrap_result.confidence_interval.high - bootstrap_result.confidence_interval.low)/2, 0, only_bold_above_random=False))
             else:
                 data_non_self_referential_comparison["$\\Delta$ Val FS$^L$ (R)"].append("-")
 
             if len(scores_zero_shot) > 1:
-                bootstrap_result_zero_shot = scipy.stats.bootstrap(method="basic", data=(scores_zero_shot,), statistic=scipy.mean)
+                bootstrap_result_zero_shot = scipy.stats.bootstrap(method="basic", data=(scores_zero_shot,), statistic=np.mean)
                 data["Val ZS$^L$"].append(display_entry(sum(scores_zero_shot)/len(scores_zero_shot), (bootstrap_result_zero_shot.confidence_interval.high - bootstrap_result_zero_shot.confidence_interval.low)/2, 0.5))
             else:
                 data["Val ZS$^L$"].append("-")
 
             if len(non_self_referential_scores_zero_shot) > 1:
                 result = [item1 - item2 for item1, item2 in zip(non_self_referential_scores_zero_shot, non_self_referential_comparison_scores_zero_shot)]
-                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=scipy.mean)
+                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=np.mean)
                 data_non_self_referential_comparison["$\\Delta$ Val ZS$^L$"].append(display_entry(sum(result)/len(result), (bootstrap_result.confidence_interval.high - bootstrap_result.confidence_interval.low)/2, 0, only_bold_above_random=False))
             else:
                 data_non_self_referential_comparison["$\\Delta$ Val ZS$^L$"].append("-")
 
             if len(rel_scores_zero_shot) > 1:
-                bootstrap_result_rel_zero_shot = scipy.stats.bootstrap(method="basic", data=(rel_scores_zero_shot,), statistic=scipy.mean)
+                bootstrap_result_rel_zero_shot = scipy.stats.bootstrap(method="basic", data=(rel_scores_zero_shot,), statistic=np.mean)
                 data["Val ZS$^L$ (R)"].append(display_entry(sum(rel_scores_zero_shot)/len(rel_scores_zero_shot), (bootstrap_result_rel_zero_shot.confidence_interval.high - bootstrap_result_rel_zero_shot.confidence_interval.low)/2, 0.5))
             else:
                 data["Val ZS$^L$ (R)"].append("-")
 
             if len(non_self_referential_rel_scores_zero_shot) > 1:
                 result = [item1 - item2 for item1, item2 in zip(non_self_referential_rel_scores_zero_shot, non_self_referential_comparison_rel_scores_zero_shot)]
-                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=scipy.mean)
+                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=np.mean)
                 data_non_self_referential_comparison["$\\Delta$ Val ZS$^L$ (R)"].append(display_entry(sum(result)/len(result), (bootstrap_result.confidence_interval.high - bootstrap_result.confidence_interval.low)/2, 0, only_bold_above_random=False))
             else:
                 data_non_self_referential_comparison["$\\Delta$ Val ZS$^L$ (R)"].append("-")
 
             if len(scores_cot) > 1:
-                bootstrap_result_cot = scipy.stats.bootstrap(method="basic", data=(scores_cot,), statistic=scipy.mean)
+                bootstrap_result_cot = scipy.stats.bootstrap(method="basic", data=(scores_cot,), statistic=np.mean)
                 data["Val CoT$^T$"].append(display_entry(sum(scores_cot)/len(scores_cot), (bootstrap_result_cot.confidence_interval.high - bootstrap_result_cot.confidence_interval.low)/2, 0.5))
             else:
                 data["Val CoT$^T$"].append("-")
 
             if len(non_self_referential_scores_cot) > 1:
                 result = [item1 - item2 for item1, item2 in zip(non_self_referential_scores_cot, non_self_referential_comparison_scores_cot)]
-                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=scipy.mean)
+                bootstrap_result = scipy.stats.bootstrap(method="basic", data=(result,), statistic=np.mean)
                 data_non_self_referential_comparison["$\\Delta$ Val CoT$^T$"].append(display_entry(sum(result)/len(result), (bootstrap_result.confidence_interval.high - bootstrap_result.confidence_interval.low)/2, 0, only_bold_above_random=False))
             else:
                 data_non_self_referential_comparison["$\\Delta$ Val CoT$^T$"].append("-")
@@ -311,7 +312,7 @@ for index, row in data_non_self_referential_comparison_df.iterrows():
         scores.append(float(row[metric].replace("\\textbf{", "")[:5]))
 
 avg_score = sum(scores)/len(scores)
-bootstrap_result = scipy.stats.bootstrap(method="basic", data=(scores,), statistic=scipy.mean)
+bootstrap_result = scipy.stats.bootstrap(method="basic", data=(scores,), statistic=np.mean)
 print("Avg delta score without CoT:", f"{avg_score} $\pm$ {(bootstrap_result.confidence_interval.high - bootstrap_result.confidence_interval.low)}")
 
 
@@ -473,9 +474,9 @@ for index, row in df_human_losses.iterrows():
     rel_val_score("l_true_statement_true_answer", "l_true_statement_false_answer", "l_false_statement_true_answer", "l_false_statement_false_answer", scores_rel_val, row)
 
 print("Human Val")
-bootstrap_result_val = scipy.stats.bootstrap(method="basic", data=(scores_val,), statistic=scipy.mean)
+bootstrap_result_val = scipy.stats.bootstrap(method="basic", data=(scores_val,), statistic=np.mean)
 print(display_entry(sum(scores_val)/len(scores_val), (bootstrap_result_val.confidence_interval.high - bootstrap_result_val.confidence_interval.low)/2, 0.5))
 
 print("Human Rel Val")
-bootstrap_result_rel_val = scipy.stats.bootstrap(method="basic", data=(scores_rel_val,), statistic=scipy.mean)
+bootstrap_result_rel_val = scipy.stats.bootstrap(method="basic", data=(scores_rel_val,), statistic=np.mean)
 print(display_entry(sum(scores_rel_val)/len(scores_rel_val), (bootstrap_result_rel_val.confidence_interval.high - bootstrap_result_rel_val.confidence_interval.low)/2, 0.5))

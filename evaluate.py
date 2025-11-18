@@ -4,7 +4,7 @@ import json
 import os
 import argparse
 from string import Template
-from langchain.llms import Anthropic
+from anthropic import Anthropic
 from dotenv import dotenv_values
 from openai import OpenAI
 import torch
@@ -38,6 +38,7 @@ parser.add_argument("--half_precision", action="store_true")
 parser.add_argument("--impossible_dataset", action="store_true")
 args = parser.parse_args()
 
+
 if args.impossible_dataset:
     evaluation_results_dir = "impossible_evaluation_results"
     data_list = read_jsonl("i_am_an_impossible_dataset.jsonl")
@@ -59,31 +60,46 @@ if not args.api_model:
             model = AutoModelForCausalLM.from_pretrained(args.model).to(args.device)
     model.eval()
 else:
-    if args.model == "claude-2":
+    if args.model == "claude-sonnet-4-5-20250929":
         if ANTHROPIC_API_KEY is None:
-            raise ValueError("You are trying to use claude-2, but your ANTHROPIC_API_KEY is not set in a .env file.")
-        kwargs_for_non_cot = {"max_tokens_to_sample": 2}
-        model = Anthropic(model="claude-2", anthropic_api_key=ANTHROPIC_API_KEY)
-    elif args.model == "gpt-4" or args.model == "gpt-4-1106-preview" or args.model == "gpt-3.5-turbo":
+            raise ValueError("You are trying to use claude-4.5, but your ANTHROPIC_API_KEY is not set in a .env file.")
+        anthropic_client = Anthropic(api_key=ANTHROPIC_API_KEY)
+        kwargs_for_non_cot = {"max_tokens": 2}
+        
+        def model(message, max_tokens=1024, temperature=0):
+            response = anthropic_client.messages.create(
+                model="claude-sonnet-4-5-20250929",
+                max_tokens=max_tokens,
+                temperature=temperature,
+                messages=[{"role": "user", "content": message}]
+            )
+            return response.content[0].text
+    elif args.model == "gpt-4o" or args.model == "gpt-4-1106-preview" or args.model == "gpt-3.5-turbo":
         if OPENAI_API_KEY is None:
-            raise ValueError("You are trying to use gpt-4, but your OPENAI_API_KEY is not set in a .env file.")
+            raise ValueError("You are trying to use gpt-4o, but your OPENAI_API_KEY is not set in a .env file.")
         os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
         client = OpenAI()
-        kwargs_for_non_cot = {"max_tokens": 2, "top_logprobs": 5, "logprobs": True}
-        def model(message, max_tokens=None, logprobs=None, top_logprobs=None, temperature=0):
-            completion = client.chat.completions.create(
-                temperature=temperature,
-                logprobs=logprobs,
-                max_tokens=max_tokens,
-                top_logprobs=top_logprobs,
-                model=args.model,
-                messages=[
-                    {"role": "user", "content": message}
-                ],
-            )
-            if max_tokens==None:
-                return completion.choices[0].message.content
-            return completion
+
+        kwargs_for_non_cot = {"max_completion_tokens": 10}  # No logprobs for GPT-5.1
+    
+        def model(message, max_tokens=None, max_completion_tokens=None, logprobs=None, top_logprobs=None, temperature=0):
+            params = {
+                "temperature": temperature,
+                "model": "gpt-5.1",
+                "messages": [{"role": "user", "content": message}]
+            }
+            
+            # Determine token limit
+            if max_completion_tokens is not None:
+                params["max_completion_tokens"] = max_completion_tokens
+            elif max_tokens is not None:
+                params["max_completion_tokens"] = max_tokens
+            else:
+                params["max_completion_tokens"] = 8000
+
+            completion = client.chat.completions.create(**params)
+            
+            return completion.choices[0].message.content
     else:
         raise ValueError(f"{args.model} is not a supported model for our evaluation yet when using the api_model option.")
 
