@@ -66,7 +66,7 @@ else:
         anthropic_client = Anthropic(api_key=ANTHROPIC_API_KEY)
         kwargs_for_non_cot = {"max_tokens": 2}
         
-        def model(message, max_tokens=1024, temperature=0):
+        def model(message, max_tokens=1024, temperature=1):
             response = anthropic_client.messages.create(
                 model="claude-sonnet-4-5-20250929",
                 max_tokens=max_tokens,
@@ -74,7 +74,7 @@ else:
                 messages=[{"role": "user", "content": message}]
             )
             return response.content[0].text
-    elif args.model == "gpt-4o" or args.model == "gpt-4-1106-preview" or args.model == "gpt-3.5-turbo":
+    elif args.model == "gpt-5" or args.model == "gpt-4-1106-preview" or args.model == "gpt-3.5-turbo":
         if OPENAI_API_KEY is None:
             raise ValueError("You are trying to use gpt-4o, but your OPENAI_API_KEY is not set in a .env file.")
         os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
@@ -82,10 +82,10 @@ else:
 
         kwargs_for_non_cot = {"max_completion_tokens": 10}  # No logprobs for GPT-5.1
     
-        def model(message, max_tokens=None, max_completion_tokens=None, logprobs=None, top_logprobs=None, temperature=0):
+        def model(message, max_tokens=None, max_completion_tokens=None, logprobs=None, top_logprobs=None, temperature=1):
             params = {
                 "temperature": temperature,
-                "model": "gpt-5.1",
+                "model": "gpt-5",
                 "messages": [{"role": "user", "content": message}]
             }
             
@@ -215,8 +215,8 @@ for datum in tqdm(data_list):
                     break
             return loss
 
-        generated_text_true_statement_cot = model(true_statement_cot, temperature=0)
-        generated_text_false_statement_cot = model(false_statement_cot, temperature=0)
+        generated_text_true_statement_cot = model(true_statement_cot, temperature=1)
+        generated_text_false_statement_cot = model(false_statement_cot, temperature=1)
 
         time.sleep(1)  # For rate limits.
 
@@ -235,11 +235,11 @@ for datum in tqdm(data_list):
             true_statement_zero_shot = zero_shot_template.substitute(example=true_statement, answer="")
             false_statement_zero_shot = zero_shot_template.substitute(example=false_statement, answer="")
 
-            generated_text_true_statement_zero_shot = model(true_statement_zero_shot, temperature=0, **kwargs_for_non_cot)
-            generated_text_false_statement_zero_shot = model(false_statement_zero_shot, temperature=0, **kwargs_for_non_cot)
+            generated_text_true_statement_zero_shot = model(true_statement_zero_shot, temperature=1, **kwargs_for_non_cot)
+            generated_text_false_statement_zero_shot = model(false_statement_zero_shot, temperature=1, **kwargs_for_non_cot)
 
-            generated_text_true_statement_few_shot = model(true_statement_few_shot, temperature=0, **kwargs_for_non_cot)
-            generated_text_false_statement_few_shot = model(false_statement_few_shot, temperature=0, **kwargs_for_non_cot)
+            generated_text_true_statement_few_shot = model(true_statement_few_shot, temperature=1, **kwargs_for_non_cot)
+            generated_text_false_statement_few_shot = model(false_statement_few_shot, temperature=1, **kwargs_for_non_cot)
 
             validation_outputs[-1]["loss_true_statement_true_answer_few_shot"] = get_api_loss("true", generated_text_true_statement_few_shot)
             validation_outputs[-1]["loss_true_statement_false_answer_few_shot"] = get_api_loss("false", generated_text_true_statement_few_shot)
@@ -252,8 +252,8 @@ for datum in tqdm(data_list):
 
         if non_self_referential:
 
-            non_self_referential_generated_text_true_statement_cot = model(non_self_referential_true_statement_cot, temperature=0)
-            non_self_referential_generated_text_false_statement_cot = model(non_self_referential_false_statement_cot, temperature=0)
+            non_self_referential_generated_text_true_statement_cot = model(non_self_referential_true_statement_cot, temperature=1)
+            non_self_referential_generated_text_false_statement_cot = model(non_self_referential_false_statement_cot, temperature=1)
 
             validation_outputs[-1]["non_self_referential_generated_text_true_statement_cot"] = non_self_referential_generated_text_true_statement_cot
             validation_outputs[-1]["non_self_referential_generated_text_false_statement_cot"] = non_self_referential_generated_text_false_statement_cot
@@ -267,11 +267,11 @@ for datum in tqdm(data_list):
                 non_self_referential_true_statement_zero_shot = non_self_referential_zero_shot_template.substitute(example=non_self_referential_true_statement, answer="")
                 non_self_referential_false_statement_zero_shot = non_self_referential_zero_shot_template.substitute(example=non_self_referential_false_statement, answer="")
 
-                non_self_referential_generated_text_true_statement_zero_shot = model(non_self_referential_true_statement_zero_shot, temperature=0, **kwargs_for_non_cot)
-                non_self_referential_generated_text_false_statement_zero_shot = model(non_self_referential_false_statement_zero_shot, temperature=0, **kwargs_for_non_cot)
+                non_self_referential_generated_text_true_statement_zero_shot = model(non_self_referential_true_statement_zero_shot, temperature=1, **kwargs_for_non_cot)
+                non_self_referential_generated_text_false_statement_zero_shot = model(non_self_referential_false_statement_zero_shot, temperature=1, **kwargs_for_non_cot)
 
-                non_self_referential_generated_text_true_statement_few_shot = model(non_self_referential_true_statement_few_shot, temperature=0, **kwargs_for_non_cot)
-                non_self_referential_generated_text_false_statement_few_shot = model(non_self_referential_false_statement_few_shot, temperature=0, **kwargs_for_non_cot)
+                non_self_referential_generated_text_true_statement_few_shot = model(non_self_referential_true_statement_few_shot, temperature=1, **kwargs_for_non_cot)
+                non_self_referential_generated_text_false_statement_few_shot = model(non_self_referential_false_statement_few_shot, temperature=1, **kwargs_for_non_cot)
 
                 validation_outputs[-1]["non_self_referential_loss_true_statement_true_answer_few_shot"] = get_api_loss("true", non_self_referential_generated_text_true_statement_few_shot)
                 validation_outputs[-1]["non_self_referential_loss_true_statement_false_answer_few_shot"] = get_api_loss("false", non_self_referential_generated_text_true_statement_few_shot)
@@ -364,11 +364,11 @@ for datum in tqdm(data_list):
                 if max_new_tokens == 0:
                     return "", ""
                 prompt_length_true_statement_cot = len(input_ids_true_statement_cot[0])
-                generated_ids_true_statement_cot = model.generate(input_ids_true_statement_cot, max_new_tokens=max_new_tokens, num_return_sequences=1, num_beams=1, do_sample=False, pad_token_id=tokenizer.eos_token_id, temperature=0.0)
+                generated_ids_true_statement_cot = model.generate(input_ids_true_statement_cot, max_new_tokens=max_new_tokens, num_return_sequences=1, num_beams=1, do_sample=False, pad_token_id=tokenizer.eos_token_id, temperature=1.0)
                 generated_text_true_statement_cot = tokenizer.decode(generated_ids_true_statement_cot[0][prompt_length_true_statement_cot:], skip_special_tokens=True)
 
                 prompt_length_false_statement_cot = len(input_ids_false_statement_cot[0])
-                generated_ids_false_statement_cot = model.generate(input_ids_false_statement_cot, max_new_tokens=max_new_tokens, num_return_sequences=1, num_beams=1, do_sample=False, pad_token_id=tokenizer.eos_token_id, temperature=0.0)
+                generated_ids_false_statement_cot = model.generate(input_ids_false_statement_cot, max_new_tokens=max_new_tokens, num_return_sequences=1, num_beams=1, do_sample=False, pad_token_id=tokenizer.eos_token_id, temperature=1.0)
                 generated_text_false_statement_cot = tokenizer.decode(generated_ids_false_statement_cot[0][prompt_length_false_statement_cot:], skip_special_tokens=True)
                 return generated_text_true_statement_cot, generated_text_false_statement_cot
 
