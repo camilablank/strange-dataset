@@ -1,3 +1,8 @@
+# Benchmarking Current LLMs on "I am a Strange Dataset"
+
+This is an extension of the paper "I am a Strange Dataset: Metalinguistic Tests for Language Models" by Thrush et. al. on frontier models as of 2025.
+The original README can be found below.
+
 # I am a Strange Dataset
 
 This is the repository for "I am a Strange Dataset: Metalinguistic Tests for Language Models".
